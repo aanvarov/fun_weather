@@ -1,0 +1,324 @@
+/* ---|| GENERAL CSS ||--- */
+/* ----------------------- */
+*{
+    margin: 0;
+    padding: 0;
+}
+*, ::after, ::before{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Ubuntu, sans-serif;
+    background-image: url(../img/bodybg.png);
+    background-size: 100%;
+}
+@font-face{
+    font-family: Ubuntu;
+    src: url(../fonts/Ubuntu-Regular.ttf);
+}
+.container{
+    width: 65%;
+    padding-right: 25px;
+    padding-left: 25px;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: auto;
+}
+a,
+a:hover,
+a:active,
+a:focus{
+    text-decoration: none;
+    transition-duration: .5s;
+}
+li{
+    list-style: none;
+    display: list-item;
+}
+.heading-3{
+    color: rgb(100, 141, 255);
+    font-size: 24px;
+    text-align: center;
+    margin: 15px 0;
+}
+.heading-4{
+    color: rgb(52, 56, 83);
+    margin-bottom: 10px;
+}
+.sub-head{
+    text-align: center;
+    font-size: 12px;
+    color: rgb(140, 140, 140)
+}
+.pt-60{
+    padding-top: 60px;
+}
+.pt-80{
+    padding-top: 80px;
+}
+.pt-100{
+    padding-top: 100px;
+}
+.pb-80{
+    padding-bottom: 80px;
+}
+.in-block{
+    display: inline-block;
+}
+.both{
+    clear: both;
+}
+.right{
+    float: right;
+}
+.left{
+    float: left;
+}
+.text-left{
+    text-align: left;
+}
+/* ---|| SITE HEADER CSS ||--- */
+/* --------------------------- */
+#site-header{
+    width: 100%;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    transition: all .5s;
+    /* background-color: rgb(100, 140, 254); */
+}
+/* .pixelTop{
+    background-color: rgb(100, 140, 254);
+    box-shadow: 0 3px 20px rgb(20, 64, 187);
+}
+.pixelDown{
+    background-color: rgb(100, 254, 113);
+    box-shadow: 0 3px 20px rgb(82, 247, 6);
+} */
+#navigation{
+    height: 50px;
+    font-size: 14px;
+    line-height: 50px;
+    width: 100%;
+    z-index: 100;
+    font-weight: 400;
+}
+#logo{ 
+    font-weight: 600;
+    width: 15%;
+}
+#socials{
+    width: 15%;
+    text-align: right;
+}
+#main-nav{
+    width: 65%;
+    text-align: center;
+}
+#logo a,.nav-item a{
+    color: white;
+}
+.nav-item .nav-link{
+    padding: 0 25px;
+}
+#nav .active {
+    color: darkblue;
+    background-color: #fff;
+    font-weight: bold;
+    padding: 15px 12px;
+}
+#socials i{
+    margin: 0 0 0 15px;
+}
+/* ---|| INTRO SECTION STARTS ||--- */
+/* -------------------------------- */
+#intro{
+    background-image: url(../img/homebg.png);
+    background-size: 100%;
+    height: 700px;
+    background-repeat: no-repeat;
+    color: white;
+    background-position: 50% -100%;
+}
+#intro-left{
+    padding-top: 200px;
+    display: block;
+    width: 40%;
+}
+#intro-left h1{
+    font-size: 40px;
+    line-height: 1.3;
+    animation: uzgar 5s infinite;
+}
+@keyframes uzgar{
+    0% {color: darkblue;}
+    33% {color: darkslategray;}
+    66% {color: darkmagenta;}
+    100% {color: darkred;}
+}
+
+#intro-left>p{
+    font-size: 12px;
+    line-height: 1.3;
+    padding: 25px 0;
+    font-weight: 400;
+}
+#intro-btns button{
+    padding: 10px 25px;
+    color: white;
+    font-family: Ubuntu, sans-serif;
+    font-weight: 500;
+    border: none;
+    margin: 0 5px;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+}
+#intro-btns button:hover{
+	animation: uyna linear .5s infinite;
+	background-color: rgb(252, 106, 65);
+	box-shadow: 0 0 3px #9f7300;
+}
+@keyframes uyna {
+	0%{transform: scale(1);}
+	50%{transform: scale(1.1);}
+	100%{transform: scale(1);}
+}
+#download-btn{
+    background-color: rgb(252, 106, 65);
+}
+#features-btn{
+    background-color: rgb(68, 102, 200)
+}
+#intro-right img{
+    padding-top: 150px;
+    padding-right: 50px;
+    height: 550px;
+    display: block;
+}
+#scrollDown{
+    position: absolute;
+    bottom: 35px;
+    right: 49%;
+}
+#scrollDown>a{
+    padding: 10px 13px;
+    border-radius: 50%;
+    background-color: white;
+    color: black;
+    font-size: 12px;
+}
+#scrollDown{
+    animation: mover 0.5s infinite  alternate;
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+/* ---|| FEATURES SECTION STARTS ||--- */
+/* ----------------------------------- */
+.p-features-items{
+    width: calc(100% / 3 - 4px);
+}
+.p-features-items img{
+    width: 50px;
+    margin-right: 15px;
+}
+.feature-text{
+    width: 75%;
+}
+.feature-text>.sub-head{
+    text-align: left;
+    line-height: 1.8;
+}
+#widgets{
+    text-align: center;
+    position: relative;
+}
+#widgets img{
+    width: 600px;
+    margin-top: 30px;
+}
+#widgets i{
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+}
+/* ---|| SCREENSHOTS START ||--- */
+/* ----------------------------- */
+#screenshots img{
+    max-height: 420px;
+}
+#screenshots .left, #screenshots .right{
+    width: 45%;
+    padding-top: 60px;
+}
+#screenshots p{
+    line-height: 1.6;
+}
+/* REVIEWS START */
+/* ------------- */
+#reviews{
+    margin-bottom: 80px;
+}
+#reviews-4{
+    margin-top: 40px;
+    overflow: auto;
+}
+.reviews-item{
+    float: left;
+    width: 50%;
+    margin: 25px 0;
+    line-height: 1.4;
+}
+.reviews-item h6{
+    padding: 15px 0;
+}
+/* ---|| DoWnLoAd section ||--- */
+/* ---------------------------- */
+#download{
+    background: url(../img/downloadbg.png);
+    background-size: 100%;
+    color: white;
+    position: relative;
+    padding-bottom: 70px;
+}
+#download .left{
+    width: 39%;
+}
+#download p{
+    margin: 20px 0;
+}
+#appdownload{
+    width: 500px;
+    position: absolute;
+    right: 15%;
+    bottom: 0;
+}
+/* ---|| footer starts ||--- */
+/* ------------------------- */
+#site-footer{
+    background-color: rgb(52, 56, 83);
+    color: rgb(179, 180, 198);
+}
+#footer-top{
+    padding: 50px 0;
+    border-bottom: 1px solid rgb(137, 164, 253);
+}
+#red-fun{
+    color: rgb(255, 105, 71)
+}
+#blue-weather{
+    color: rgb(96, 138, 246)
+}
+#footer-bottom{
+    font-size: 12px;
+    padding: 35px 0 70px;
+    text-align: right;
+}
